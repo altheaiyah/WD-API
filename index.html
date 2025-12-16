@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plants vs. Zombies</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid" style="border-bottom: 2px solid darkgray;">
+    <div class="row p-3 align-items-center">
+      <div class="col">
+        <div class="col-12 col-md-auto d-flex justify-content-center justify-content-md-center">
+          <a class="navbar-brand" href="#">
+            <img src="img/Logo_Nintendo.svg" height="40" alt="Nintendo">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row" id="contentArea"></div>
+  </div>
+
+  <script src="home.js"></script>
+  <script>
+    var contentArea = document.getElementById("contentArea");
+
+    for (var i = 0; i < homeData.length; i++) {
+      contentArea.innerHTML += `
+      <div class="container-fluid" style="background-color: ${homeData[i].bgColor};">
+        <div class="row p-3 align-items-start">
+          <div class="col-6 d-flex justify-content-start justify-content-md-start mb-0">
+            <img src="${homeData[i].imageSmall}" class="img-fluid d-block d-md-none m-0 pt-2"
+                 style="max-height: 250px; max-width: 100%; height: auto; width: auto;" alt="${homeData[i].name}">
+            <img src="${homeData[i].imageMedium}" class="img-fluid d-none d-md-block m-0 ps-5"
+                 style="max-height: 350px; max-width: 100%; height: auto;" alt="${homeData[i].name}">
+          </div>
+          <div class="col-6 d-flex flex-column align-items-center justify-content-center py-5">
+            <img src="${homeData[i].logo}" class="img-fluid mb-3"
+                 style="max-width: 100%; max-height:${homeData[i].logoHeight}px;" alt="${homeData[i].name} Logo">
+            <a href="${homeData[i].link}">
+              <button class="btn btn-light rounded-5">See Amiibos</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
