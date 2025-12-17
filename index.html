@@ -4,26 +4,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Plants vs. Zombies</title>
+  <title>Nintendo | Amiibo Series</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="container-fluid" style="border-bottom: 2px solid darkgray;">
+  <div class="container-fluid" style="border-bottom: 1px solid darkgray;">
     <div class="row p-3 align-items-center">
-      <div class="col">
-        <div class="col-12 col-md-auto d-flex justify-content-center justify-content-md-center">
-          <a class="navbar-brand" href="#">
-            <img src="img/Logo_Nintendo.svg" height="40" alt="Nintendo">
-          </a>
-        </div>
+      <div class="col-12 col-md-auto d-flex justify-content-center justify-content-md-center">
+        <a class="navbar-brand" href="#">
+          <img src="img/Logo_Nintendo.svg" height="40" alt="Nintendo">
+        </a>
       </div>
     </div>
   </div>
 
   <div class="container-fluid">
-    <div class="row" id="contentArea"></div>
+    <div class="row justify-content-center mt-5">
+      <img src="img/Logo_Amiibo.svg" height="40" alt="Amiibo Logo">
+    </div>
+    <div class="row justify-content-center my-2">
+      <img src="img/amiibo_lineup.png" alt="Amiibo Logo">
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 text-center">
+        <p class="p-3">
+          Amiibo are interactive figures and cards that bring your favorite Nintendo characters to life. Place
+          an amiibo on the NFC touchpoint of your Nintendo Switch, Wii U, or New Nintendo 3DS system, to
+          unlock new modes, special features, bonuses, and in-game content across a variety of games.
+        </p>
+      </div>
+    </div>
+    <div class="h1 fw-bold my-3 text-center">Game Series</div>
+    <div class="row justify-content-center my-3" id="contentArea"></div>
+  </div>
+
+  <div>
+    <footer class="py-3" style="border-top: 1px solid darkgray;">
+      <div class="container text-center">
+        <p class="small mb-0 text-muted ">
+          <strong>Nintendo Amiibo Series</strong><br>
+          &copy; 2025 Nintendo. All rights reserved | API: <a class="text-secondary fw-semibold" style="text-decoration: none;" href="https://amiiboapi.com/">AmiiboAPI</a>
+        </p>
+      </div>
+    </footer>
   </div>
 
   <script src="home.js"></script>
@@ -35,16 +60,18 @@
       <div class="container-fluid" style="background-color: ${homeData[i].bgColor};">
         <div class="row p-3 align-items-start">
           <div class="col-6 d-flex justify-content-start justify-content-md-start mb-0">
-            <img src="${homeData[i].imageSmall}" class="img-fluid d-block d-md-none m-0 pt-2"
-                 style="max-height: 250px; max-width: 100%; height: auto; width: auto;" alt="${homeData[i].name}">
-            <img src="${homeData[i].imageMedium}" class="img-fluid d-none d-md-block m-0 ps-5"
-                 style="max-height: 350px; max-width: 100%; height: auto;" alt="${homeData[i].name}">
+            <img class="img-fluid d-block d-md-none m-0 pt-2" src="${homeData[i].imageSmall}" 
+              style="max-height: 250px; max-width: 100%; height: auto; width: auto;" alt="${homeData[i].name}">
+            <img class="img-fluid d-none d-md-block m-0 ps-5" src="${homeData[i].imageMedium}" 
+              style="max-height: 350px; max-width: 100%; height: auto;" alt="${homeData[i].name}">
           </div>
           <div class="col-6 d-flex flex-column align-items-center justify-content-center py-5">
-            <img src="${homeData[i].logo}" class="img-fluid mb-3"
-                 style="max-width: 100%; max-height:${homeData[i].logoHeight}px;" alt="${homeData[i].name} Logo">
+            <img class="img-fluid mb-3" src="${homeData[i].logo}" 
+              style="max-width: 100%; max-height:${homeData[i].logoHeight}px;" alt="${homeData[i].name} Logo">
             <a href="${homeData[i].link}">
-              <button class="btn btn-light rounded-5">See Amiibos</button>
+              <button class="btn btn-dark fw-bold rounded-5 shadow" style="background-color: ${homeData[i].btnColor}; color: ${homeData[i].btnText}!important;">
+                See Amiibos
+              </button>
             </a>
           </div>
         </div>

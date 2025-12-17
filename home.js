@@ -6,7 +6,9 @@ var homeData = [
     imageMedium: "img/home_mario_md.png",
     logo: "img/Logo_Mario_Series.svg",
     link: "mario.html",
-    logoHeight: 150
+    logoHeight: 150,
+    btnColor: "#FBD000",
+    btnText: "#000000"
   },
   {
     name: "Legend of Zelda",
@@ -15,7 +17,9 @@ var homeData = [
     imageMedium: "img/home_zelda_md.png",
     logo: "img/Logo_Zelda.svg",
     link: "zelda.html",
-    logoHeight: 150
+    logoHeight: 150,
+    btnColor: "#1E5F4B",
+    btnText: "#F2C94C"
   },
   {
     name: "Animal Crossing",
@@ -24,6 +28,8 @@ var homeData = [
     imageMedium: "img/home_ac_md.png",
     logo: "img/Logo_Ac.svg",
     link: "ac.html",
-    logoHeight: 200
+    logoHeight: 200,
+    btnColor: "#F4A7C1", 
+    btnText: "#7A5C45" 
   }
 ];
